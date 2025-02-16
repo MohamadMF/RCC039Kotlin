@@ -18,7 +18,8 @@ fun tryCatch() {
         println("...")
     } catch (e: Exception) {
         println("Error: ${e.message}")
-        e.printStackTrace()
+        //To see the name of error in run results, but exit code is 0
+        println("${e.printStackTrace()}")
     }
 }
 

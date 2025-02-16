@@ -29,5 +29,7 @@ fun main() {
     numToHalf(10)
     tryCatch()
 
+    doLec8Codes()
+
 
 }

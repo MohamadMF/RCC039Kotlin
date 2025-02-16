@@ -1,7 +1,5 @@
 package org.example
 
-import java.util.*
-
 fun doLec5Codes() {
     val a = 4
     val b = 2
