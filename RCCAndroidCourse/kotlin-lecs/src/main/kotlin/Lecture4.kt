@@ -1,10 +1,7 @@
 package org.example
 
-import java.text.SimpleDateFormat
-import java.util.*
-
 fun doLec4Codes() {
-    /* String Tamplets
+    /* String Templates
         If I want to print Float or Double number _
         with roundup, It's by "%.2f" as 2 means two decimal numbers.
 
@@ -62,7 +59,7 @@ fun doLec4Codes() {
     println("x after end is $x")
 }
 
-fun doLec4Excerises() {
+fun doLec4Exercises() {
     /*
     Groot loves to say his name. Write a program that prints
     “I AM GROOT” 6 times using the while loop
