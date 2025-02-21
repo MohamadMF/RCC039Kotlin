@@ -38,4 +38,7 @@ fun main() {
     doLec9Codes()
     doLec9Exercise()
 
+    doLec10Codes()
+    doLec10Exercise()
+
 }
