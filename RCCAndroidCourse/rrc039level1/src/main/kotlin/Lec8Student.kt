@@ -1,6 +1,6 @@
 package org.example
 
-class Student {
+class Lec8Student {
     var name = "Lollipop"
     var age = 32
 }

@@ -2,6 +2,9 @@ package org.example
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+// To reformat current selection = Ctrl + Alt + L
+// To reformat Whole project = Shift + Ctrl + Alt + L
 fun main() {
     doLec2Codes()
     doLec2MainMission()
@@ -30,6 +33,9 @@ fun main() {
     tryCatch()
 
     doLec8Codes()
+    doLec8Exercise()
 
+    doLec9Codes()
+    doLec9Exercise()
 
 }
