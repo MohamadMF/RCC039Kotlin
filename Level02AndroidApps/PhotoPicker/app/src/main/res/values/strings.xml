@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Photo Picker</string>
+    <string name="btn_name">Click to pick a photo</string>
+    <string name="btn_next">Next Page</string>
+</resources>
