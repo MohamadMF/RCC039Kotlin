@@ -24,6 +24,5 @@ class ListViewLayout : AppCompatActivity() {
         val animalsViewLayout: ListView = findViewById(R.id.animals)
         animalsViewLayout.adapter = animalAdapter
 
-
     }
 }
