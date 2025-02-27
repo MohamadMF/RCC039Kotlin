@@ -12,21 +12,37 @@
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
         android:text="Welcome to our app"
         android:textAllCaps="true"
-        android:textSize="32sp" />
-
+        android:textSize="28sp" />
+    <!--when you made start and end margin, use marginHorizontal-->
     <EditText
-        android:id="@+id/edit_text_id"
+        android:id="@+id/email_text_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="emailAddress"
         android:hint="Email"
         android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/name_text_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:autofillHints="name"
+        android:hint="Name"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         android:text="Login" />
 
 
