@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RCC039</string>
+    <string name="introduction">Please click on button below to access to our website</string>
+    <string name="str_web_btn">Android Website</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Rec With Card View</string>
+    <string name="bird">Bird</string>
+    <string name="camel">Camel</string>
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="elephant">Elephant</string>
+    <string name="fish">Fish</string>
+    <string name="monkey">Monkey</string>
+    <string name="turtle">Turtle</string>
+
+</resources>

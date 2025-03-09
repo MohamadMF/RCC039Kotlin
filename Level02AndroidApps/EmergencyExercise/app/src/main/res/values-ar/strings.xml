@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تمرين جهات الطوارئ</string>
+    <string name="str_intro">يمكنك الوصول إلى جهات الطوارئ أدناه</string>
+    <string name="name01">م. أحمد عاطف</string>
+    <string name="name02">محمد الصاوي</string>
+    <string name="name03">دم. مها زيدان</string>
+    <string name="name04">إياد عمرو</string>
+    <string name="name05">أحمد صلاح</string>
+    <string name="name06">فيفيان سمير</string>
+    <string name="name07">عبدالله</string>
+    <string name="name08">يارا عمرو</string>
+    <string name="name09">معتز ممدوح</string>
+    <string name="name10">مصطفى رفعت</string>
+    <string name="name11">عبدالرحمن خالد</string>
+    <string name="name12">أحمد صلاح</string>
+    <string name="name13">يوسف شعبان</string>
+    <string name="name14">صموئيل بشرى أيوب</string>
+    <string name="name15">بيشوي بهاء</string>
+    <string name="name16">ميدو</string>
+    <string name="name17">عاطف صديق</string>
+    <string name="name18">محمد حمدي</string>
+    <string name="num01">+201113536547</string>
+    <string name="num02">+201003635812</string>
+    <string name="num03">+201006768689</string>
+    <string name="num04">+201014240322</string>
+    <string name="num05">+201033004355</string>
+    <string name="num06">+201027361651</string>
+    <string name="num07">+201104453012</string>
+    <string name="num08">+201118178420</string>
+    <string name="num09">+201118684993</string>
+    <string name="num10">+201125723513</string>
+    <string name="num11">+201119678673</string>
+    <string name="num12">+201157888617</string>
+    <string name="num13">+201200060257</string>
+    <string name="num14">+201201440143</string>
+    <string name="num15">+201270042441</string>
+    <string name="num16">+201271311269</string>
+    <string name="num17">+966552212774</string>
+    <string name="num18">+201091412022</string>
+</resources>

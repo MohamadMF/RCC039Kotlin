@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android Versions List</string>
+    <string name="jelly_bean">Jelly Bean</string>
+    <string name="kitkat">Kitkat</string>
+    <string name="lollipop">Lollipop</string>
+    <string name="marshmallow">Marshmallow</string>
+    <string name="nougat">Nougat</string>
+    <string name="oreo">Oreo</string>
+</resources>

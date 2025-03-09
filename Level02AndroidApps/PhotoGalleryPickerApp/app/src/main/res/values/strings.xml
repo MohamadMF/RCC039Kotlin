@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Photo Gallery Picker</string>
+    <string name="str_btn_name">Click to pick a photo</string>
+    <string name="str_btn_next">Next Page</string>
+</resources>
