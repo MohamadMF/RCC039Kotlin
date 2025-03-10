@@ -38,4 +38,8 @@
     <string name="num16">+201271311269</string>
     <string name="num17">+966552212774</string>
     <string name="num18">+201091412022</string>
+    <string name="dialog_title">خروج!</string>
+    <string name="dialog_message">هل أنت متأكد تريد الخروج؟</string>
+    <string name="positive_dialog_btn">نعم</string>
+    <string name="negative_dialog_btn">لا</string>
 </resources>
