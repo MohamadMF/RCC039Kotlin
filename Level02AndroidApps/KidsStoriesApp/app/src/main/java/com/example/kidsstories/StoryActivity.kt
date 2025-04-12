@@ -27,9 +27,11 @@ class StoryActivity : AppCompatActivity() {
         titleTxtVw.text = intent.getStringExtra("title")
         storyTxtVw.text = intent.getStringExtra("story")
         storyImg.setImageResource(intent.getIntExtra("picture",-2))
-        MediaPlayer
+
+        MediaPlayer //companion object
             .create(this,intent.getIntExtra("sound",-1))
             .start()
+
         val pref = getSharedPreferences("settings", MODE_PRIVATE)
         val newSize = pref.getInt("size",20).toFloat()
         titleTxtVw.textSize = newSize + 8

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Basketball Mission</string>
+    <string name="zero">0</string>
+    <string name="point1">2 Points</string>
+    <string name="point2">3 Points</string>
+    <string name="free_throw">Free Throw</string>
+    <string name="end_game">End game</string>
+    <string name="reset">Reset</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+</resources>
