@@ -3,6 +3,7 @@ package com.example.notesapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,13 +26,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.addFab.setOnClickListener {
             startActivity(
-                Intent(this,AddingNoteActivity::class.java)
+                Intent(this, AddingNoteActivity::class.java)
             )
             finish()
         }
 
         //this code to show the notes it already saved
-        viewModel.getNotes().observe(this){ notes ->
+        viewModel.getNotes().observe(this) { notes ->
             /*val fieldListRows = mutableListOf<String>()
             for (element in notes)
                 fieldListRows.add(element.details)
@@ -40,11 +41,35 @@ class MainActivity : AppCompatActivity() {
             val adapter = ArrayAdapter(
                 this,
                 android.R.layout.simple_list_item_1,
-                fieldListRows)
+                fieldListRows
+            )
             binding.notesList.adapter = adapter
-        }
-        binding.notesList.setOnItemClickListener { parent, view, position, id ->
+
+            binding.notesList.setOnItemClickListener { _, _, position, _ ->
+                val intent = Intent(this, EditingNoteActivity::class.java)
+                intent.putExtra("note", notes[position])
+                startActivity(intent)
+            }
 
         }
+        binding.topAppBarChild.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.delete_all -> {
+                    viewModel.deleteAllNotes()
+                    Toast.makeText(this, "All notes has deleted!", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                R.id.favorites -> {
+                    //viewModel.upsert(Note(details = "Your note content", isFavorite = true))
+                    Toast.makeText(this, "Became in Favorites!", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                else -> false
+            }
+        }
+
+
     }
 }

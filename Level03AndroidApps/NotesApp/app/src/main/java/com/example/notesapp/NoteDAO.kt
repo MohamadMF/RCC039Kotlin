@@ -29,4 +29,7 @@ interface NoteDAO {
     //DELETE FROM note WHERE _id == 1
     @Delete
     fun deleteNote(n: Note)
+    //WHERE is_favorite = 0"
+    @Query("DELETE FROM note")
+    fun deleteAll()
 }

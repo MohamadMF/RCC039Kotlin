@@ -9,4 +9,5 @@ class NoteViewModel(app: Application) : AndroidViewModel(app) {
     fun upsert(note: Note) = db.dao.upsertNote(note)
     fun delete(note: Note) = db.dao.deleteNote(note)
     fun getNotes() = db.dao.getNotes()
+    fun deleteAllNotes() = db.dao.deleteAll()
 }
