@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.infinitydogs"
+    namespace = "com.example.newsapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.infinitydogs"
+        applicationId = "com.example.newsapp"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.okhttp.logging.interceptor)
     implementation(libs.bundles.retrofit)
     implementation(libs.glide)
     implementation(libs.androidx.core.ktx)
