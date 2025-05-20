@@ -70,7 +70,6 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun verifyEmail() {
         val user = Firebase.auth.currentUser
-
         user!!.sendEmailVerification()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

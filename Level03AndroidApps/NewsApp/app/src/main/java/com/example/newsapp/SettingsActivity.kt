@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.newsapp.databinding.ActivitySettingsBinding
+import androidx.core.content.edit
 
 class SettingsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
@@ -30,9 +31,9 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun changeCountry(code: String) {
-        val prefs = getSharedPreferences("settings", MODE_PRIVATE).edit()
-        prefs.putString("code", code)
-        prefs.apply()
+        getSharedPreferences("settings", MODE_PRIVATE).edit {
+            putString("code", code)
+        }
         Toast.makeText(this, "Changed!", Toast.LENGTH_SHORT).show()
     }
 }

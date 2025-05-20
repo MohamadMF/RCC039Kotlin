@@ -14,6 +14,8 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHomeBinding
@@ -46,11 +48,19 @@ class HomeActivity : AppCompatActivity() {
             showAd()
         }
         binding.toolBar.setOnMenuItemClickListener {
-            if (it.itemId == R.id.settings_item){
-                startActivity(Intent(this,SettingsActivity::class.java))
-                true
-            } else
-                false
+            when (it.itemId) {
+                R.id.settings_item -> {
+                    goToSettingsActivity(this)
+                    true
+                }
+                R.id.signOut_item -> {
+                    Firebase.auth.signOut()
+                    goToLoginActivity(this)
+                    finishAffinity()
+                    true
+                }
+                else -> false
+            }
 
         }
 
