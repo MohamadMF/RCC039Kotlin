@@ -8,6 +8,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import com.example.newsapp.databinding.ActivityMainBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -31,6 +34,17 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         loadNews()
+
+        // Create a new ad view.
+        val adView = AdView(this)
+        adView.adUnitId = "ca-app-pub-3940256099942544/9214589741"
+        adView.setAdSize(
+            AdSize.
+            getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, 360)
+        )
+        binding.adViewContainer.addView(adView)
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
     }
 
     private fun loadNews() {

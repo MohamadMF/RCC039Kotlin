@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -39,6 +40,9 @@ android {
 }
 
 dependencies {
+    implementation("com.google.firebase:firebase-auth")
+    implementation(platform(libs.firebase.bom))  // Note: `.` replaces `-` in TOML names
+    implementation(libs.play.services.ads)      // Same here, kebab-case becomes dot notation
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.bundles.retrofit)
     implementation(libs.glide)

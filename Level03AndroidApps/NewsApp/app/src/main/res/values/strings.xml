@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">News App</string>
     <string name="see_more">... <u>SEE MORE</u> </string>
+    <string name="already_an_user"><u>Already an user?</u></string>
+    <string name="new_user"><u>New user?</u></string>
+    <string name="forgot_password"><u>Forgot your password?</u></string>
 </resources>
