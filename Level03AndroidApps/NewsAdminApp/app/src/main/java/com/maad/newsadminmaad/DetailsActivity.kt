@@ -31,9 +31,12 @@ class DetailsActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        val handler = registerForActivityResult(
+            ActivityResultContracts.GetContent()) {
+                binding.imageBtn.setImageURI(it)
+        }
         binding.imageBtn.setOnClickListener {
-
+            handler.launch("image/*")
         }
 
         binding.doneImage.setOnClickListener {
