@@ -34,16 +34,46 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, DetailsActivity::class.java))
         }
 
-
+        prepareSwipeToDelete()
     }
 
+    override fun onResume() {
+        super.onResume()
+        getFirebaseArticles()
+    }
 
     private fun getFirebaseArticles() {
-
+        Firebase
+            .firestore
+            .collection("articles")
+            .get()
+            .addOnSuccessListener {
+                val article = it.toObjects(Article::class.java)
+                val adapter = ArticleAdapter(this, article)
+                binding.newsRv.adapter = adapter
+                binding.loadingProgress.isVisible = false
+            }
     }
 
     private fun prepareSwipeToDelete() {
+        val helper = object : ItemTouchHelper
+                .SimpleCallback(0,
+                    ItemTouchHelper.START or ItemTouchHelper.END) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                TODO("Not yet implemented")
+            }
 
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder,
+                                  direction: Int) {
+                TODO("Not yet implemented")
+            }
+
+        }
+        ItemTouchHelper(helper).attachToRecyclerView(binding.newsRv)
     }
 
     private fun deleteDocument(position: Int) {
